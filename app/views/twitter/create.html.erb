@@ -3,7 +3,7 @@
     <h1 class="text-2xl font-bold text-gray-800 mb-4 text-center">変換完了!</h1>
     <p class="text-gray-700 mb-6 text-center">変換されたテキスト:</p>
     <pre class="text-center"><%= @converted_text %></pre>
-    <%= link_to "このテキストをTwitterで投稿", "https://twitter.com/intent/tweet?text=#{CGI.escape(@converted_text)}#{CGI.escape(root_path)}%23enari_converter", class: "block mx-auto bg-blue-500 text-white px-4 py-2 rounded text-center" %>
+    <%= link_to "Twitterで共有する", "https://twitter.com/intent/tweet?url=#{CGI.escape(root_url)}&text=#{CGI.escape(@converted_text)}", target: "_blank", class: "block mx-auto bg-blue-500 text-white px-4 py-2 rounded text-center" %>
     <%= link_to "戻る", root_path, class: "block mt-4 text-blue-600 text-center" %>
   </div>
 </div>
